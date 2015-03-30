@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.ComponentModel;
-using System.Data;
+using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
@@ -17,14 +12,12 @@ namespace WindowsFormsApplication1
 		private int m_currentIndex = 0;
 		private ArrayList m_pics = new ArrayList();
 
-
 		public Form1()
 		{
 			InitializeComponent();
 			FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 			DialogResult result = folderBrowserDialog.ShowDialog();
 
-			
 			string folder = "";
 			if (result == DialogResult.OK) // Test result.
 			{
@@ -37,8 +30,6 @@ namespace WindowsFormsApplication1
 
 			var files = Directory.GetFiles(folder);
 
-			
-	
 			var ImageExtensions = new List<string> { ".JPG", ".JPE", ".BMP", ".GIF", ".PNG" };
 			foreach (var file in files)
 			{
@@ -55,15 +46,10 @@ namespace WindowsFormsApplication1
 
 			SetPicture();
 
-
-
 		}
-
-
 
 		private void SetPicture()
 		{
-
 			pictureBox1.Image = Image.FromFile((string)m_pics[m_currentIndex]);
 
 			pictureBox1.Height = pictureBox1.Image.Height;
@@ -71,7 +57,6 @@ namespace WindowsFormsApplication1
 
 			//Form1. make is scroll to the top
 		}
-
 
 		private void previousButton_Click(object sender, EventArgs e)
 		{
@@ -90,8 +75,6 @@ namespace WindowsFormsApplication1
 				SetPicture();
 			}
 		}
-
-		
 
 	}
 }
