@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{4B1A919C-1944-4FBD-85AF-B097DE8F04AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicViewer", "ComicViewer\ComicViewer.csproj", "{4B1A919C-1944-4FBD-85AF-B097DE8F04AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

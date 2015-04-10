@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-	partial class Form1
+	partial class View
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -38,9 +38,8 @@
 			// 
 			this.pictureBox1.Location = new System.Drawing.Point(12, 12);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+			this.pictureBox1.Size = new System.Drawing.Size(492, 299);
 			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
 			// 
 			// previousButton
 			// 
@@ -64,7 +63,7 @@
 			this.nextButton.UseVisualStyleBackColor = true;
 			this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
 			// 
-			// Form1
+			// View
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,8 +72,10 @@
 			this.Controls.Add(this.nextButton);
 			this.Controls.Add(this.previousButton);
 			this.Controls.Add(this.pictureBox1);
-			this.Name = "Form1";
+			this.KeyPreview = true;
+			this.Name = "View";
 			this.Text = "Form1";
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.View_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 

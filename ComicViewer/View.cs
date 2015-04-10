@@ -7,23 +7,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-	public partial class Form1 : Form
+	public partial class View : Form
 	{
 		private int m_currentIndex = 0;
 		private ArrayList m_pics = new ArrayList();
 
-		public Form1()
+		public View()
 		{
 			InitializeComponent();
-			FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-			DialogResult result = folderBrowserDialog.ShowDialog();
 
-			string folder = "";
-			if (result == DialogResult.OK) // Test result.
-			{
-				folder = folderBrowserDialog.SelectedPath;
-			}
-			else
+			var folder = GetFolder();
+			if (folder == null)
 			{
 				return;
 			}
@@ -44,11 +38,11 @@ namespace WindowsFormsApplication1
 				return;
 			}
 
-			SetPicture();
+			LoadPicture();
 
 		}
 
-		private void SetPicture()
+		private void LoadPicture()
 		{
 			pictureBox1.Image = Image.FromFile((string)m_pics[m_currentIndex]);
 
@@ -63,7 +57,7 @@ namespace WindowsFormsApplication1
 			if (m_currentIndex > 0)
 			{
 				m_currentIndex--;
-				SetPicture();
+				LoadPicture();
 			}
 		}
 
@@ -72,7 +66,32 @@ namespace WindowsFormsApplication1
 			if (m_currentIndex < m_pics.Count - 1)
 			{
 				m_currentIndex++;
-				SetPicture();
+				LoadPicture();
+			}
+		}
+
+		private string GetFolder()
+		{
+			FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+			DialogResult result = folderBrowserDialog.ShowDialog();
+
+			string folder = "";
+			if (result == DialogResult.OK)
+			{
+				return folderBrowserDialog.SelectedPath;
+			}
+			return null;
+		}
+
+		private void View_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Q)
+			{
+				previousButton_Click(null, null);
+			}
+			else if (e.KeyCode == Keys.E)
+			{
+				nextButton_Click(null, null);
 			}
 		}
 
