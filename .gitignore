@@ -1,0 +1,75 @@
+# Build folders
+obj/
+bin/
+Release/
+Debug/
+
+# User specific VS/R# files/folders
+_ReSharper.Advatar/
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.ncb
+*.docstates
+version.rc
+
+# Logs
+Web Services/LOG/
+*.InstallLog
+
+# Python files/folders
+__pycache__/
+*.pyc
+
+# Database files/folders
+*.dbmdl
+db/Resources/Invidi.Xpress.ReachEstimatorCLR.dll
+db/Resources/Invidi.Xpress.DBUtilities.dll
+db/Resources/Invidi.Xpress.DBUtilities.XmlSerializers.dll
+PostDeployScript.sql
+
+#Unit Test files/folders
+TestResult.xml
+FxCopOutput.xml
+NunitOutput.xml
+NunitOutputAdmin.xml
+NunitOutputCalculator.xml
+NunitOutputGui.xml
+resultsUnitTests.xml
+resultsUnitTestsAdmin.xml
+CoverageUnitTests/
+CoverageUnitTestsAdmin/
+*.VisualState.xml
+
+Unit Tests Db/DatabasesToTest/SchemaDump/
+
+# Subversion files
+
+.svn/
+SubversionAssemblyInfo.cs
+
+# Installer files and Directories
+Web.Transformed.Config
+AdvatarInstallers/
+/Prerequisites Installer/FreeExtractor/output
+/Prerequisites Installer/FreeExtractor/common/stub.h
+/Prerequisites Installer/FreeExtractor/common/icon.h
+installers/*/out
+*.wixpdb
+*.msi
+!WiX Tolset 3.7/**
+!WiX Tolset 3.7
+
+# Other files/folders
+*.zip
+\#*#
+*~
+
+*.dbmdl
+
+#3rd party auto generated files from the reporter
+Data Distributor/Unit\ Tests\ Reporter/Data\ Library/gpg/random_seed
+Data Distributor/nDumbster/nDumbster.xml
+.idea
+/packages/NUnit.Runners.2.6.4/tools/Addins
